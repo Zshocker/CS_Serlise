@@ -18,8 +18,10 @@ namespace TestSeri
             Hicham.add_amie(moh);
             Hicham.add_amie(Hi);
             Hicham.add_amie(Khad);
+            //ex 2
             string tr = JsonNet.Serialize(Hicham);
             Console.WriteLine(tr);
+            //ex 3
             File.WriteAllText("Hicham.json",tr);
             Etudiant copie = JsonNet.Deserialize<Etudiant>(File.ReadAllText("Hicham.json"));
             Console.ReadLine();
